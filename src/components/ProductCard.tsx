@@ -1,4 +1,4 @@
-import { Import, ShoppingCart, View } from "lucide-react"
+import { ShoppingCart, View } from "lucide-react"
 import type { Product } from "../types/product"
 import { useCart } from "../context/CartContext"
 import { Link, useLocation } from "react-router-dom"
@@ -24,7 +24,7 @@ const ProductCard = ({ product }: Props) => {
             <figure className=" relative h-72 w-full bg-black/5 overflow-hidden">
                 <img src={product.thumbnail} alt="nose" className="h-full w-full object-contain group-hover:scale-110 transition-transform duration-300" />
                 {/* overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 />
             </figure>
 

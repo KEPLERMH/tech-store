@@ -64,7 +64,7 @@ const Home = () => {
 
     return (
         <div className=' space-y-7 my-6 px-4 xl:px-30'>
-            <Filters categories={categories} register={register} watch={watch} />
+            <Filters categories={categories} register={register} />
             <div className='flex flex-col gap-6'>
 
                 <div className=" border py-2 px-5 rounded-xl flex gap-2 items-center justify-between">

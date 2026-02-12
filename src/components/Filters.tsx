@@ -6,10 +6,9 @@ import type { FiltersForm } from "../types/filters"
 type FiltersProps = {
     categories: string[];
     register: UseFormRegister<FiltersForm>
-    watch: UseFormRegister<FiltersForm>
 }
 
-const Filters = ({ categories, register, watch }: FiltersProps) => {
+const Filters = ({ categories, register }: FiltersProps) => {
     // const serach = watch("search");
     // console.log(serach);
     return (

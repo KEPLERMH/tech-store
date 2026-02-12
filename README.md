@@ -1,73 +1,101 @@
-# React + TypeScript + Vite
+# 🛒 React Cart - Context API + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación de carrito de compras desarrollada con **React + TypeScript**, utilizando **Context API + useReducer** para el manejo de estado global y **localStorage** para persistencia de datos.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+* ✅ Agregar productos al carrito
+* ✅ Incrementar / Decrementar cantidad
+* ✅ Eliminar productos
+* ✅ Vaciar carrito
+* ✅ Persistencia con localStorage
+* ✅ Manejo de estado global con Context API
+* ✅ Arquitectura escalable
+* ✅ Código tipado con TypeScript
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* React
+* TypeScript
+* Context API
+* useReducer
+* localStorage
+* Vite 
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 Instalación
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clona el repositorio:
+
+```bash
+git clone https://github.com/KEPLERMH/tech-store.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Instala dependencias:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+Ejecuta el proyecto:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🧠 Arquitectura
+
+El proyecto utiliza:
+
+* **Context API** para exponer el estado global del carrito.
+* **useReducer** para manejar la lógica de actualización.
+* **Custom Hook (`useCart`)** para encapsular el consumo del contexto.
+* **Persistencia con localStorage** mediante `useEffect`.
+
+Flujo de datos:
+
+```
+Component → dispatch(action) → reducer → new state → Context → Components
+```
+
+---
+
+
+## 🔄 Acciones del Reducer
+
+* `ADD_TO_CART`
+* `REMOVE_FROM_CART`
+* `INCREMENT`
+* `DECREMENT`
+* `EMPTY`
+
+---
+
+## 💾 Persistencia
+
+El estado del carrito se guarda automáticamente en `localStorage` y se restaura al recargar la página.
+
+---
+
+## 📈 Posibles mejoras futuras
+
+* Persistencia en backend
+* Autenticación de usuario
+* Sincronización entre pestañas
+* Optimización con memoización avanzada
+* Testing con Jest / React Testing Library
+* Migración a Zustand o Redux Toolkit
+
+---
+
+## 👨‍💻 Autor
+
+Kepler Matos Desarrollado como proyecto de práctica para mejorar manejo de estado global y arquitectura en React.
+

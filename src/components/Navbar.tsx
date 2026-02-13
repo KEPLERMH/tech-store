@@ -9,7 +9,7 @@ const Navbar = () => {
     const totalItems = state.items.reduce((acc, item) => { return acc + item.quantity }, 0);
 
     return (
-        <header className=" sticky top-0 z-10  p-4 shadow-lg xl:px-30 bg-white">
+        <header className="min-w-88.75 sticky top-0 z-10  p-4 shadow-lg xl:px-30 bg-white">
             <nav className=" flex items-center justify-between">
                 <div className="flex items-center gap-2">
                     <div className="bg-primary-blue p-2 rounded-xl">

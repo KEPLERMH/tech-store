@@ -20,7 +20,7 @@ const ProductCard = ({ product }: Props) => {
     const location = useLocation();
 
     return (
-        <article className="group border border-gray-200 rounded-xl overflow-hidden shadow-(--shadow-card) hover:shadow-xl transition-shadow  duration-300 ease-in">
+        <article className=" group border border-gray-200 rounded-xl overflow-hidden shadow-(--shadow-card) hover:shadow-xl transition-shadow  duration-300 ease-in">
             <figure className=" relative h-72 w-full bg-black/5 overflow-hidden">
                 <img src={product.thumbnail} alt="nose" className="h-full w-full object-contain group-hover:scale-110 transition-transform duration-300" />
                 {/* overlay */}

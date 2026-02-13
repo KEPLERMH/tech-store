@@ -63,11 +63,11 @@ const Home = () => {
     const visibleProducts = filteredProducts?.slice(startIndex, endIndex);
 
     return (
-        <div className='w-full min-w-88.75 space-y-7 my-6 px-4 xl:px-30'>
+        <div className='w-full  space-y-7 my-6 px-4 xl:px-30'>
             <Filters categories={categories} register={register} />
             <div className='w-full flex flex-col gap-6'>
 
-                <div className=" overflow-hidden py-2 px-5 rounded-xl flex  flex-col gap-2 items-center  md:flex-row md:justify-between">
+                <div className="  overflow-hidden py-2 px-5 rounded-xl flex  flex-col gap-2 items-center  md:flex-row md:justify-between">
                     <p className="text-sm">Mostrando <span className="font-semibold">{visibleProducts?.length}</span> de <span className="font-semibold">{filteredProducts?.length}</span> productos</p>
 
                     <div className="flex items-center justify-center gap-4">

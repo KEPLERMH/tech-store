@@ -19,13 +19,13 @@ type CartItemProduct = {
 const CartItem = ({ item }: CartItemProduct) => {
     const { dispatch } = useCart();
     return (
-        <li className="min-w-[336px] border border-red-600 rounded-lg bg-gray-50 p-4 flex justify-between">
-            <div className="flex gap-2">
-                <figure className="w-20 h-20 border">
-                    <img src={item.image} alt="" className="w-full h-full object-contain" />
+        <li className="  rounded-lg bg-gray-50 p-4 flex  justify-between">
+            <div className="flex flex-wrap gap-2 items-center">
+                <figure className=" w-20 h-20 border border-gray-200 rounded-2xl">
+                    <img src={item.image} alt={item.image} className="w-full h-full object-contain" />
                 </figure>
-                <div>
-                    <h2 className="font-semibold">{item.title}</h2>
+                <div className='flex-1 min-w-24.5'>
+                    <h2 className="font-semibold line-clamp-2">{item.title}</h2>
                     <p className="text-gray-500">{item.category}</p>
                     <p className="text-primary-blue ">$ {item.price}</p>
                 </div>

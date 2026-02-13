@@ -9,21 +9,21 @@ const Navbar = () => {
     const totalItems = state.items.reduce((acc, item) => { return acc + item.quantity }, 0);
 
     return (
-        <header className="min-w-88.75 sticky top-0 z-10  p-4 shadow-lg xl:px-30 bg-white">
-            <nav className=" flex items-center justify-between">
-                <div className="flex items-center gap-2">
+        <header className=" sticky top-0 z-10  p-4 shadow-lg xl:px-30 bg-white">
+            <nav className="w-full flex flex-wrap flex-row items-center justify-between gap-2 ">
+                <div className="flex flex-wrap items-center gap-2 flex-1 min-w-30">
                     <div className="bg-primary-blue p-2 rounded-xl">
                         <Store className="text-white w-7 h-7" />
                     </div>
                     <div className="">
-                        <h1 className="font-semibold text-xl">TechStore</h1>
-                        <p className="text-sm text-gray-600 ">Tu tienda de tecnología</p>
+                        <h1 className="font-semibold text-xl truncate">TechStore</h1>
+                        <p className="text-sm text-gray-600  leading-tight">Tu tienda de tecnología</p>
                     </div>
                 </div>
 
                 {/* boton de ver carrito */}
                 <button
-                    className="relative bg-primary-blue flex items-center gap-1 px-5 py-3 rounded-2xl cursor-pointer text-white hover:bg-primary-blue-hover "
+                    className=" relative bg-primary-blue flex items-center gap-1 px-3 py-2 sm:px-5 sm:py-3 rounded-2xl cursor-pointer text-white hover:bg-primary-blue-hover "
                     onClick={() => navigate("/cart", { state: { background: location } })}
                 >
                     <ShoppingCart />

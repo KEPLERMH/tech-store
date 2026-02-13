@@ -11,7 +11,7 @@ const QuantitySelector = ({ idItem }: QuantityProp) => {
         <div className="flex border border-gray-400 rounded-lg overflow-hidden">
             <button type="button" onClick={() => dispatch({ type: "DECREMENT", payload: idItem })} disabled={count === 1} className="px-1 w-7 text-2xl cursor-pointer hover:bg-gray-200 transition-colors duration-200 ease-in disabled:cursor-no-drop disabled:bg-gray-200">-</button>
 
-            <input type="text" value={count} readOnly className=" w-20 text-center pointer-events-none outline-none" />
+            <input type="text" value={count} readOnly className="w-10 md:w-20  text-center pointer-events-none outline-none" />
 
             <button type="button" onClick={() => dispatch({ type: "INCREMENT", payload: idItem })} className="px-1 w-7 text-2xl cursor-pointer hover:bg-gray-200 transition-colors duration-200 ease-in">+</button>
         </div>

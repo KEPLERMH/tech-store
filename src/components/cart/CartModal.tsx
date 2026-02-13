@@ -12,14 +12,14 @@ const CartModal = ({ onClose }: cartModalProp) => {
     const { state } = useCart();//{items:[{imge},{},{}]}
     const arrayLength = state.items.length;
     return (
-        <div className=" fixed inset-0 z-40 flex justify-center items-center">
+        <div className="fixed inset-0 z-40 flex justify-center items-center">
             <div className="absolute inset-0 bg-black/50 backdrop-blur-xs" onClick={onClose}>
             </div>
-            <section className="mx-5 my-10 z-50 min-w-[390px] w-full max-w-2xl max-h-[80vh] rounded-2xl overflow-hidden flex flex-col">
+            <section className=" mx-5 my-10 z-50  w-full max-w-2xl max-h-[80vh] rounded-2xl overflow-hidden flex flex-col">
                 <header className=" shrink-0 p-5 text-white bg-primary-blue flex justify-between items-center">
                     <HeaderCart onClose={onClose} />
                 </header>
-                <main className="border py-1 bg-white min-h-44 max-h-[284px] overflow-y-auto ">
+                <main className="py-1 bg-white min-h-44 max-h-71 overflow-y-auto ">
                     {
                         arrayLength === 0 && (
                             <div className=" text-gray-400 h-48 flex  gap-2 flex-col justify-center items-center">
@@ -30,7 +30,7 @@ const CartModal = ({ onClose }: cartModalProp) => {
                         )
                     }
 
-                    <ul className=" p-5 flex flex-col gap-4 ">
+                    <ul className="p-5 flex flex-col gap-4 ">
                         {
                             state.items.map(item => <CartItem key={item.id} item={item} />)
                         }

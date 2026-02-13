@@ -19,7 +19,7 @@ type CartItemProduct = {
 const CartItem = ({ item }: CartItemProduct) => {
     const { dispatch } = useCart();
     return (
-        <li className="border border-gray-300 rounded-lg bg-gray-50 p-4 flex justify-between">
+        <li className="min-w-[336px] border border-red-600 rounded-lg bg-gray-50 p-4 flex justify-between">
             <div className="flex gap-2">
                 <figure className="w-20 h-20 border">
                     <img src={item.image} alt="" className="w-full h-full object-contain" />

@@ -15,11 +15,11 @@ const CartModal = ({ onClose }: cartModalProp) => {
         <div className=" fixed inset-0 z-40 flex justify-center items-center">
             <div className="absolute inset-0 bg-black/50 backdrop-blur-xs" onClick={onClose}>
             </div>
-            <section className="mx-5 my-10 z-50 w-full max-w-2xl max-h-[90vh] rounded-2xl overflow-hidden flex flex-col">
+            <section className="mx-5 my-10 z-50 min-w-[390px] w-full max-w-2xl max-h-[80vh] rounded-2xl overflow-hidden flex flex-col">
                 <header className=" shrink-0 p-5 text-white bg-primary-blue flex justify-between items-center">
                     <HeaderCart onClose={onClose} />
                 </header>
-                <main className=" py-3 bg-white min-h-44 overflow-y-auto ">
+                <main className="border py-1 bg-white min-h-44 max-h-[284px] overflow-y-auto ">
                     {
                         arrayLength === 0 && (
                             <div className=" text-gray-400 h-48 flex  gap-2 flex-col justify-center items-center">
@@ -36,6 +36,7 @@ const CartModal = ({ onClose }: cartModalProp) => {
                         }
                     </ul>
                 </main>
+
                 {
                     arrayLength > 0 && (
                         <footer className=" shrink-0 space-y-3 p-5 bg-gray-50 border-t border-gray-200">
